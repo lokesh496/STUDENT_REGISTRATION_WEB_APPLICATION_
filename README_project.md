@@ -1,3 +1,18 @@
+## Deploying to Render.com
+
+This repository contains a Dockerfile that builds the project with Maven and runs it on Tomcat. Follow these steps to deploy to Render:
+
+1. Push this repository to GitHub (already done).
+2. On Render, create a new **Web Service** and connect your GitHub repo.
+3. Select the `Docker` environment and make sure the `Dockerfile` path is `Dockerfile` (root).
+4. In Render's dashboard, under **Environment**, add these environment variables (do NOT put secrets in `render.yaml`):
+	- `DB_URL` — full JDBC URL (include `sslmode=require` for Neon)
+	- `DB_USER` — database user
+	- `DB_PASSWORD` — database password
+5. Deploy. The Dockerfile will run `mvn package` in the build stage and start Tomcat serving the app at `/`.
+
+Access your app at the Render-generated domain and visit `/dbtest` to verify DB connectivity.
+
 # Student Management (Servlet/JSP/JDBC)
 
 Java 17 Student Management web application using Servlets, JSP, JDBC, and PostgreSQL (Neon).
