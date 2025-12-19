@@ -1,0 +1,66 @@
+/* General styles for registration page */
+:root{
+    --bg1:#0f172a;
+    --bg2:#0f2a52;
+    --card:#0b1220;
+    --accent:#7c3aed;
+    --accent-2:#06b6d4;
+    --text:#e6eef8;
+}
+*{box-sizing:border-box;font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif}
+html,body{height:100%;margin:0}
+.bg-gradient{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:linear-gradient(135deg,var(--bg1),var(--bg2));
+}
+.card{
+    background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+    border-radius:14px;
+    padding:28px;
+    width:380px;
+    color:var(--text);
+    box-shadow:0 8px 30px rgba(2,6,23,0.6);
+}
+.center-card{ text-align:left }
+.card h2{margin:0 0 12px 0;font-weight:600}
+.form label{display:block;margin:12px 0 6px 0;font-size:14px}
+.form select{
+    width:100%;padding:12px 14px;border-radius:10px;border:1px solid rgba(255,255,255,0.12);
+    background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.04));color:var(--text);outline:none;font-size:15px;
+    -webkit-appearance:none;-moz-appearance:none;appearance:none;box-shadow:inset 0 1px 0 rgba(255,255,255,0.02)
+}
+.form input[type="text"],
+.form input[type="email"],
+.form input[type="password"]{
+    width:100%;padding:10px 12px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);
+    background:rgba(255,255,255,0.02);color:var(--text);outline:none;font-size:14px
+}
+
+.form select:focus, .form input:focus{box-shadow:0 6px 20px rgba(7,9,25,0.5);border-color:rgba(124,58,237,0.6)}
+.form select option{color:#111}
+
+/* Custom select */
+.custom-select{position:relative}
+.custom-select .select-trigger{padding:12px 14px;border-radius:10px;border:1px solid rgba(255,255,255,0.08);background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(0,0,0,0.03));color:var(--text);cursor:pointer}
+.custom-select .options{position:absolute;left:0;right:0;top:calc(100% + 8px);background:#fff;color:#111;border-radius:10px;box-shadow:0 10px 30px rgba(2,6,23,0.6);max-height:280px;overflow:auto;z-index:50}
+.custom-select .option{padding:10px 14px;border-bottom:1px solid rgba(0,0,0,0.05);cursor:pointer}
+.custom-select .option:hover{background:linear-gradient(90deg, rgba(124,58,237,0.08), rgba(6,182,212,0.06));color:#fff}
+.custom-select .option:last-child{border-bottom:none}
+.custom-select .select-trigger:focus{outline:none;box-shadow:0 10px 30px rgba(124,58,237,0.18)}
+.buttons{display:flex;gap:10px;margin-top:18px}
+.btn{display:inline-block;padding:10px 14px;border-radius:10px;text-decoration:none;color:var(--text);cursor:pointer;border:none}
+.btn.primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));box-shadow:0 6px 18px rgba(124,58,237,0.25)}
+.btn.primary:hover{transform:translateY(-2px)}
+.btn.secondary{background:transparent;border:1px solid rgba(255,255,255,0.06)}
+.alert{margin-top:14px;padding:10px;border-radius:8px;font-size:14px}
+.alert-success{background:rgba(34,197,94,0.12);color:#bbf7d0}
+.alert-error{background:rgba(239,68,68,0.08);color:#fecaca}
+.message{margin-top:8px}
+
+/* Responsive */
+@media (max-width:480px){
+    .card{width:92%;padding:18px}
+}

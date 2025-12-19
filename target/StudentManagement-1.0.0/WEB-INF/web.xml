@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
+         version="5.0">
+
+    <display-name>StudentManagement</display-name>
+
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+    <!-- Optional: context params as fallback. You can provide DB creds here or via environment variables. -->
+    <!-- Neon PostgreSQL connection (example values supplied) -->
+    <context-param>
+        <param-name>DB_URL</param-name>
+        <param-value>jdbc:postgresql://ep-curly-art-a456yhbk-pooler.us-east-1.aws.neon.tech/neondb?sslmode=require&amp;channelBinding=require</param-value>
+    </context-param>
+    <context-param>
+        <param-name>DB_USER</param-name>
+        <param-value>neondb_owner</param-value>
+    </context-param>
+    <context-param>
+        <param-name>DB_PASSWORD</param-name>
+        <param-value>npg_KpDh4oXLFAG8</param-value>
+    </context-param>
+
+</web-app>

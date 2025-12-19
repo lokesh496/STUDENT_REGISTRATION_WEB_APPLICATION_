@@ -1,0 +1,71 @@
+/* Admin styles */
+:root{
+    --bg1:#061026;
+    --bg2:#072540;
+    --card:#081525;
+    --accent:#06b6d4;
+    --muted:#9fb0c8;
+    --text:#ecf8ff;
+}
+*{box-sizing:border-box;font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif}
+html,body{height:100%;margin:0;background:linear-gradient(180deg,var(--bg1),var(--bg2));color:var(--text)}
+.topbar{display:flex;justify-content:space-between;align-items:center;padding:12px 20px;background:rgba(255,255,255,0.02);box-shadow:0 6px 20px rgba(2,6,23,0.5)}
+.topbar .brand{font-weight:700;font-size:18px}
+.topbar .nav-actions{display:flex;gap:12px}
+.nav-link{color:var(--text);text-decoration:none;padding:8px 10px;border-radius:8px}
+.nav-link:hover{background:rgba(255,255,255,0.02)}
+.btn-logout{background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.03)}
+.dashboard{display:flex;gap:18px;padding:24px}
+.card.stats{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:12px;flex:1}
+.stat-value{font-size:28px;font-weight:700;margin-top:8px}
+.actions{padding:0 24px 24px}
+.btn{display:inline-block;padding:10px 14px;border-radius:10px;text-decoration:none;color:var(--text);cursor:pointer;border:none}
+.btn.primary{background:linear-gradient(90deg,#06b6d4,#7c3aed);}
+.btn.secondary{background:transparent;border:1px solid rgba(255,255,255,0.06)}
+.container{padding:20px}
+.table-responsive{overflow:auto;background:rgba(255,255,255,0.02);padding:14px;border-radius:12px}
+.students-table{width:100%;border-collapse:collapse;color:var(--text)}
+.students-table th, .students-table td{padding:10px 8px;border-bottom:1px solid rgba(255,255,255,0.03);text-align:left}
+.students-table thead th{font-weight:600}
+.btn-danger{background:rgba(239,68,68,0.9);color:#fff;padding:8px 10px;border-radius:8px;border:none}
+.alert{margin-top:10px;padding:10px;border-radius:8px;font-size:14px}
+.alert-success{background:rgba(34,197,94,0.12);color:#bbf7d0}
+.alert-error{background:rgba(239,68,68,0.08);color:#fecaca}
+
+/* Search bar */
+.topbar .search-input{padding:8px 12px;border-radius:10px;border:1px solid rgba(255,255,255,0.06);background:rgba(255,255,255,0.02);color:var(--text);width:300px}
+.students-table tbody tr:hover{background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(0,0,0,0.02))}
+.students-table th:first-child, .students-table td:first-child{width:72px}
+.students-table td{vertical-align:middle}
+.students-table img.avatar{width:36px;height:36px;border-radius:8px;object-fit:cover;margin-right:8px}
+
+.small-muted{color:var(--muted);font-size:13px}
+
+@media (max-width:800px){
+    .dashboard{flex-direction:column}
+}
+
+/* Admin hero */
+.admin-hero{background:linear-gradient(135deg,#6d5df6,#06b6d4);padding:20px;color:#fff}
+.admin-hero .hero-top{display:flex;justify-content:space-between;align-items:center}
+.admin-hero .brand{font-weight:700;font-size:20px}
+.admin-hero .hero-actions{display:flex;gap:12px}
+.admin-hero .hero-actions .nav-link{color:#fff;text-decoration:none;padding:8px 10px;border-radius:8px;background:rgba(255,255,255,0.06)}
+.admin-hero .hero-body{padding:18px 0}
+.admin-hero h1{margin:0;font-size:24px}
+
+.admin-main{padding:24px}
+.cards-row{display:flex;gap:18px;margin-bottom:20px}
+.dashboard-card{flex:1;background:#fff;border-radius:12px;padding:18px;display:flex;gap:12px;align-items:center}
+.dashboard-card .card-icon{font-size:28px}
+.dashboard-card .card-body{color:#0b1220}
+.dashboard-card .card-title{font-weight:700;color:#334155}
+.dashboard-card .card-value{font-size:28px;font-weight:800;margin-top:6px}
+.dashboard-card .card-sub{margin-top:8px;font-size:13px;color:#10b981}
+
+.hero-actions-row{margin-top:12px;display:flex;gap:12px}
+.btn.large{padding:14px 20px;border-radius:12px}
+
+@media (max-width:900px){
+    .cards-row{flex-direction:column}
+}
