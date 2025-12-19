@@ -1,3 +1,4 @@
+com\student\servlet\DbTestServlet.class
 com\student\servlet\DeleteStudentServlet.class
 com\student\dao\StudentDao.class
 com\student\model\Course.class
